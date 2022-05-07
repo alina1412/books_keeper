@@ -1,7 +1,7 @@
 import sys
 import os
 
-address = os.environ.get("address")         # RUN IN DEBUG!!!
+address = os.environ.get("address")         # RUN from user2_projects\books_keeper
 sys.path.append(address)                    # type: ignore
 from collections import namedtuple          # type: ignore # noqa
 from book_manager import BookManager        # type: ignore # noqa

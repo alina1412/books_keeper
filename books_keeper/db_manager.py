@@ -3,12 +3,13 @@ import re
 from collections import namedtuple
 
 # classes SqlManager, SelectQuery
-
+import os
+address = os.environ.get("address") 
 
 class SqlManager:
     def __init__(self, init_data) -> None:
         # self.init_data = init_data
-        self.db = init_data.db_name    # "books_storage.db"
+        self.db = address + "/dbases/" + init_data.db_name    # "books_storage.db"
         self.table_name = init_data.table_name  # "books"
         self.column1 = init_data.column1        # "author"
         self.column2 = init_data.column2        # "title"

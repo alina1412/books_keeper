@@ -9,6 +9,7 @@ from user_manager import UserManager
 # sess = Session()
 app = Flask(__name__)
 app.config.from_object(__name__)
+app.secret_key = 'my secret key'
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
@@ -133,7 +134,7 @@ def index():
 
 
 if __name__ == "__main__":
-    app.secret_key = 'my secret key'
+    
     # app.config['SESSION_TYPE'] = 'memcache'
 
     # sess.init_app(app)

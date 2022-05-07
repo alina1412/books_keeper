@@ -2,7 +2,8 @@ from collections import namedtuple
 import sys
 # from typing import List
 import os
-address = os.environ.get("address")                     # RUN IN DEBUG!!!
+address = os.environ.get("address")                     # RUN from user2_projects\books_keeper
+# print(address)
 sys.path.append(address)                                # type: ignore
 from book_manager import BookManager
 
