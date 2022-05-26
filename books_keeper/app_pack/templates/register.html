@@ -1,17 +1,9 @@
 {% extends "layout.html" %}
-{% block title %}
-register
-{% endblock %}
+{% block title %} register {% endblock %}
+
+
 {% block main %}
 
-<div class="alert alert-primary border text-center" role="alert">
-   {% for message in get_flashed_messages() %}
-   <div class="flash">{{ message }}</div>
-   {% endfor %}
-</div>
-{% if error %}
-<p class=error><strong>Error:</strong> {{ error }}
-   {% endif %}
 <div class="section">
    <h3>Books_keeper. Keep your list of books, search, add</h3>
 </div>

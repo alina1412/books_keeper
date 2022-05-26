@@ -1,24 +1,9 @@
 {% extends "layout.html" %}
-{% block title %}
-hello
-{% endblock %}
-{% block main %}
-<!-- <div class="section"> -->
-<!-- <div class="jumbotron" style="text-align: left;">
-    <a href="/logout">Logout</a>
-</div> -->
-<div class="alert alert-primary border text-center" role="alert">
-   {% for message in get_flashed_messages() %}
-   <div class="flash">{{ message }}</div>
-   {% endfor %}
-</div>
+{% block title %}  hello {% endblock %}
 
-<!-- <div class="jumbotron">
-   <h1>books</h1>
-</div> -->
-{% if error %}
-<p class=error><strong>Error:</strong> {{ error }}
-   {% endif %}
+
+{% block main %}
+
 <div class="section">
    <h2>Choose a type of an action</h2>
    <!-- TODO: Create a form for users to submit a data -->
@@ -70,5 +55,5 @@ hello
       </tbody>
    </table>
 </div>
-<!-- </div> -->
+
 {% endblock %}

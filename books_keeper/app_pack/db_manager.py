@@ -6,6 +6,7 @@ from collections import namedtuple
 import os
 address = os.environ.get("address") 
 
+
 class SqlManager:
     def __init__(self, init_data) -> None:
         # self.init_data = init_data

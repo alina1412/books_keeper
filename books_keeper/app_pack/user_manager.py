@@ -1,7 +1,7 @@
 import re
 from collections import namedtuple
 from sqlite3 import Error as sqlite3_err
-from db_manager import SqlManager
+from .db_manager import SqlManager
 
 # classes UserManager, PasswordLogs
 

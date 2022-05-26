@@ -1,17 +1,9 @@
 {% extends "layout.html" %}
-{% block title %}
-log_in
-{% endblock %}
+{% block title %}  log_in {% endblock %}
+
+
 {% block main %}
 
-<div class="alert alert-primary border text-center" role="alert">
-   {% for message in get_flashed_messages() %}
-   <div class="flash">{{ message }}</div>
-   {% endfor %}
-</div>
-{% if error %}
-<p class=error><strong>Error:</strong> {{ error }}
-{% endif %}
 <div class="section">
    <h3>Books_keeper. Keep your list of books, search, add</h3>
 </div>
@@ -31,13 +23,5 @@ log_in
       <input type="submit" style="background-color:#477bff;color: white;" value="Submit" name="submit">
    </form>
 </div>
-<!-- {% if session.logged_in %}
-<div class="jumbotron">
-   session.logged_in!!!!!
-</div>
-{% else %}
-<div class="jumbotron">
-   session NOT logged_in!!!!!
-</div>
-{% endif %} -->
+
 {% endblock %}

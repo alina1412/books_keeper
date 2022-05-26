@@ -1,8 +1,10 @@
 import sys
 import os
-address = os.environ.get("address")               # RUN IN DEBUG!!!
+address = os.environ.get("address")               # RUN IN DEBUG!!! 
+# RUN from user2_projects\books_keeper
 sys.path.append(address)                          # type: ignore
-from user_manager import PasswordLogs             # type: ignore # noqa
+
+from app_pack.user_manager import PasswordLogs     # type: ignore # noqa
 
 
 assert PasswordLogs.validate_email("1,1@i") is False

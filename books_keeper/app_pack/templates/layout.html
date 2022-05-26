@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link href="/static/styles.css" rel="stylesheet">
+    <link href="static/favicon.png" type="png" rel="icon">
+    <link href="static/styles.css" rel="stylesheet">
 
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-
-
 
     {% if session.logged_in %}
 
@@ -29,10 +28,24 @@
 
     {% endif %}
 
+
+    {% block error_ %}
+        <div class="alert alert-primary border text-center" role="alert">
+            {% for message in get_flashed_messages() %}
+            <div class="flash">{{ message }}</div>
+            {% endfor %}
+        </div>
+        
+        {% if error %}
+            <p class=error><strong>Error:</strong> {{ error }}
+        {% endif %}
+    {% endblock error_ %}
+
    <div class="container">
     {% block main %}
 
     {% endblock %}
     </div>
+    
 </body>
 </html>

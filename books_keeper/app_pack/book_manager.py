@@ -1,9 +1,8 @@
 from collections import namedtuple
-from db_manager import SelectQuery, SqlManager
+from .db_manager import SelectQuery, SqlManager
 
 
 class BookManager:
-
     def __init__(self, table_name) -> None:
         DB_init = namedtuple("DB_init", ['db_name', "table_name",
                              "column1", "column2", "column3"])

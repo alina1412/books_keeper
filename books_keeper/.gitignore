@@ -1,5 +1,6 @@
 readme.txt
 books_storage copy.db
+books_storage.db
 .env
 users_logs.db
 examples/*

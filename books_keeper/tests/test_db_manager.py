@@ -5,9 +5,9 @@ import os
 address = os.environ.get("address")                     # RUN from user2_projects\books_keeper
 # print(address)
 sys.path.append(address)                                # type: ignore
-from book_manager import BookManager
 
-from db_manager import SelectQuery, SqlManager     # type: ignore # noqa
+from app_pack.book_manager import BookManager
+from app_pack.db_manager import SelectQuery, SqlManager     # type: ignore # noqa
 
 
 def prepare():
